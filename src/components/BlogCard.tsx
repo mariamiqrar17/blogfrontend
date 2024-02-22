@@ -55,10 +55,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
         <p className="text-gray-600 text-sm">
           By {user?.username} | {moment(createdAt).format("LL")}
         </p>
-        <p
-          className="text-gray-700 mt-2"
-          dangerouslySetInnerHTML={{ __html: truncatedDescription }}
-        ></p>
+        <p className="text-gray-700 mt-2">{truncatedDescription}</p>
       </div>
 
       <div className="bg-gray-100 p-2 flex justify-between">

@@ -3,8 +3,24 @@ import BlogCard from "@/components/BlogCard";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
+// Define BlogCardProps interface
+interface BlogCardProps {
+  createdAt: string;
+  description: string;
+  thumbnail: string;
+  title: string;
+  updatedAt: string;
+  user: {
+    email: string;
+    password: string;
+    role: string;
+    username: string;
+  };
+  _id: string;
+}
+
 export default function Home() {
-  const [blogData, setBlogData] = useState([]);
+  const [blogData, setBlogData] = useState<BlogCardProps[]>([]);
 
   useEffect(() => {
     async function fetchBlogData() {
@@ -38,7 +54,8 @@ export default function Home() {
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {blogData.map((blog, index) => (
-            <BlogCard key={index} {...blog} />
+            // Check if blog is an object and not null before rendering BlogCard
+            blog && typeof blog === 'object' && <BlogCard key={index} {...blog} />
           ))}
         </div>
         <div className="flex justify-center m-6">
