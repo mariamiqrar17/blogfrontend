@@ -58,7 +58,7 @@ const Category: React.FC = () => {
     try {
       const response = await axios({
         method: "get",
-        url: "https://blogcrudapp.vercel.app/category/all",
+        url: "https://blogbackend-ten.vercel.app/category/all",
         headers: {
           // "Content-Type": `multipart/form-data`,
           Authorization: `Bearer ${userData?.token}`,
@@ -86,7 +86,7 @@ const Category: React.FC = () => {
       try {
         const response = await axios({
           method: 'delete',
-          url: `https://blogcrudapp.vercel.app/category/${id}`,
+          url: `https://blogbackend-ten.vercel.app/category/${id}`,
           headers: {
             Authorization: `Bearer ${userData?.token}`,
           },
@@ -135,7 +135,7 @@ const Category: React.FC = () => {
         if (editkro) {
           let res = await axios({
             method: "put",
-            url: `https://blogcrudapp.vercel.app/category/${editCatId}`,
+            url: `https://blogbackend-ten.vercel.app/category/${editCatId}`,
             headers: {
               // "Content-Type": `multipart/form-data`,
               Authorization: `Bearer ${userData?.token}`,
@@ -157,7 +157,7 @@ const Category: React.FC = () => {
         } else {
           let res = await axios({
             method: "post",
-            url: "https://blogcrudapp.vercel.app/category/create",
+            url: "https://blogbackend-ten.vercel.app/category/create",
             headers: {
               // "Content-Type": `multipart/form-data`,
               Authorization: `Bearer ${userData?.token}`,

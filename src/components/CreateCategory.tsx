@@ -44,7 +44,7 @@ const CreateCategory: React.FC = () => {
       try {
         let res = await axios({
           method: "post",
-          url: "https://blogcrudapp.vercel.app/category/create",
+          url: "https://blogbackend-ten.vercel.app/category/create",
           headers: {
             // "Content-Type": `multipart/form-data`,
             Authorization: `Bearer ${token}`,

@@ -39,7 +39,7 @@ const blogs = () => {
     try {
       const response = await axios({
         method: "get",
-        url: "https://blogcrudapp.vercel.app/blogs/all",
+        url: "https://blogbackend-ten.vercel.app/blogs/all",
         headers: {
           // "Content-Type": `multipart/form-data`,
           Authorization: `Bearer ${userData?.token}`,

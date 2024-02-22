@@ -4,7 +4,7 @@ const ManageCategory: React.FC = () => {
     
     const getAllCategory = async()=>{
         try {
-            const response = await axios.get('https://blogcrudapp.vercel.app/category/all');
+            const response = await axios.get('https://blogbackend-ten.vercel.app/category/all');
             console.log(response);
 
             

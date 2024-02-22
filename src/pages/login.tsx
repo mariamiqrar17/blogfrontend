@@ -27,7 +27,7 @@ const LoginForm: React.FC = () => {
 
   const onSubmit = async (values: typeof initialValues) => {
     try {
-      const response = await axios.post('https://blogcrudapp.vercel.app/auth/login',values)
+      const response = await axios.post('https://blogbackend-ten.vercel.app/auth/login',values)
       console.log(response.data);
       if(response.status === 201){
         Cookies.set('userData', JSON.stringify(response.data));

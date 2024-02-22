@@ -237,7 +237,7 @@ const Topbar: React.FC = () => {
               <div className={`md:flex items-center space-x-3 hidden`}>
                 <Link
                   href="/login"
-                  className="py-2 px-5 font-medium  rounded hover:text-blue-600 hover:text-white transition duration-300 border-[1px] border-green-500 text-green-500"
+                  className="py-2 px-5 font-medium  rounded hover:text-blue-600 hover:text-white transition duration-300 border-[1px] border-blue-600 text-blue-600"
                 >
                   Log In
                 </Link>
