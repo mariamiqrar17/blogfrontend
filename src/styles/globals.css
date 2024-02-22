@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+      /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    }
+  }
+
+.label{@apply block text-gray-700 text-sm font-semibold pt-3}
+.input{@apply w-full px-4 py-2 border rounded-lg focus:outline-none}
+.active-navlinks{@apply text-blue-600 border-b-4 border-blue-600}
+.inactive-navlinks{@apply  text-gray-500 border-b-4 border-transparent font-semibold hover:text-blue-600 transition duration-300}
+.error{@apply text-red-500 text-sm font-semibold}
+.btn{@apply   px-5 bg-blue-600 hover:bg-blue-600 text-white font-semibold py-[8px] rounded focus:outline-none focus:ring focus:ring-green-200}
+.btn-empty{@apply px-5 bg-white  transition duration-300 border-[1px] border-blue-600 hover:bg-blue-600 text-blue-600 font-semibold py-[8px] rounded focus:outline-none focus:ring focus:ring-green-200}
+
+.button {
+  --main-focus: #2d8cf0;
+  --font-color: #dedede;
+  --bg-color-sub: #051267;
+  --bg-color: #1a1583;
+  --main-color: #95959b;
+  position: relative;
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: 2px solid var(--main-color);
+  box-shadow: 4px 4px var(--main-color);
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.button, .button__icon {
+  transition: all 0.3s;
+}
+
+.button__text{
+  align-items: center;
+  justify-content: center;
+  margin-left: 18px;
+}
+
+.button .button__text {
+  transform: translateX(25px);
+  color: var(--font-color);
+  font-weight: 600;
+}
+
+.button .button__icon {
+  position: absolute;
+  transform: translateX(109px);
+  height: 100%;
+  width: 39px;
+  background-color: var(--bg-color-sub);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button .svg {
+  width: 20px;
+  stroke: var(--main-color);
+}
+
+.button:hover {
+  background: var(--bg-color);
+}
+
+.button:hover .button__text {
+  color: transparent;
+}
+
+.button:hover .button__icon {
+  width: 148px;
+  transform: translateX(0);
+}
+
+.button:active {
+  transform: translate(3px, 3px);
+  box-shadow: 0px 0px var(--main-color);
+}
+
+
+
+
+
+/* .svg-wrapper {
+  position: relative;
+  width: 190px;
+  height: 60px;
+  text-align: center;
+  cursor: pointer;
+} */
+
+.svg-wrapper {
+  position: fixed;
+  top: 80px; /* Adjust as needed */
+  right: 60px; /* Adjust as needed */
+  width: 190px;
+  height: 60px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.text {
+  font-size: 22px;
+  position: relative;
+  font-weight: 600;
+  top: -52px;
+  color: rgb(29, 8, 167);
+}
+
+.shape {
+  stroke-dasharray: 100 300;
+  stroke-dashoffset: -297;
+  fill: transparent;
+  stroke: rgb(29, 8, 167);
+  stroke-width: 5px;
+  transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+}
+
+
+.svg-wrapper:hover .shape {
+  stroke-width: 2px;
+  stroke-dashoffset: 0;
+  stroke-dasharray: 760;
+}
+
+.svg-wrapper:hover {
+  background-color: rgba(71, 84, 227, 0.2);
+  transition: 1s;
+}
