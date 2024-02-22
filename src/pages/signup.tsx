@@ -62,7 +62,7 @@ const SignUpForm: React.FC = () => {
       <div className="h-[92vh] flex flex-col md:flex-row justify-center md:justify-between items-center">
         <div className="md:w-1/2 ">
           <div className="hidden md:block mt-8">
-            <img src="/assets/Sign in.gif" alt="Image Description" />
+            <img src="/assets/login-image.svg" alt="Image Description" />
           </div>
         </div>
         <div className="md:w-1/2 p-8 bg-white shadow-xl rounded-lg lg:w-1/3">
@@ -81,7 +81,7 @@ const SignUpForm: React.FC = () => {
                 className={`w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none ${
                   formik.touched.username && formik.errors.username
                     ? "border-red-500"
-                    : "focus:border-green-500"
+                    : "focus:border-blue-600"
                 }`}
                 type="text"
                 id="username"
@@ -105,7 +105,7 @@ const SignUpForm: React.FC = () => {
                 className={`w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none ${
                   formik.touched.email && formik.errors.email
                     ? "border-red-500"
-                    : "focus:border-green-500"
+                    : "focus:border-blue-600"
                 }`}
                 type="email"
                 id="email"
@@ -129,7 +129,7 @@ const SignUpForm: React.FC = () => {
                 className={`w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none ${
                   formik.touched.password && formik.errors.password
                     ? "border-red-500"
-                    : "focus:border-green-500"
+                    : "focus:border-blue-600"
                 }`}
                 type="password"
                 id="password"
@@ -153,7 +153,7 @@ const SignUpForm: React.FC = () => {
                 className={`w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none ${
                   formik.touched.confirmPassword && formik.errors.confirmPassword
                     ? "border-red-500"
-                    : "focus:border-green-500"
+                    : "focus:border-blue-600"
                 }`}
                 type="password"
                 id="confirmPassword"
@@ -205,7 +205,7 @@ const SignUpForm: React.FC = () => {
             </div>
             <div>
               <button
-                className="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-3 rounded-lg focus:outline-none focus:ring focus:ring-green-200"
+                className="w-full bg-blue-600 hover:bg-blue-800 text-white font-semibold py-3 rounded-lg focus:outline-none focus:ring focus:ring-green-200"
                 type="submit"
               >
                 Sign Up
@@ -214,7 +214,7 @@ const SignUpForm: React.FC = () => {
             <div className="text-gray-700 text-sm font-semibold mt-2 text-center">
               Already have an account?{" "}
               <Link href="/login"
-                className="text-green-500 hover:underline font-semibold">Log in
+                className="text-blue-700 hover:underline font-semibold">Log in
               </Link>
             </div>
 

@@ -49,7 +49,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
 
   return (
     <div className="max-w-md mx-auto bg-white shadow-lg border-4 rounded-lg overflow-hidden">
-      {thumbnail && <img src={`https://blogcrudapp.vercel.app/${thumbnail}`} alt="" />}
+      {thumbnail && <img src={`http://localhost:3001/${thumbnail}`} alt="" />}
       <div className="p-4">
         <h2 className="text-xl font-semibold text-gray-800">{title}</h2>
         <p className="text-gray-600 text-sm">

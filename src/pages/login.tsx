@@ -57,7 +57,7 @@ const LoginForm: React.FC = () => {
       <div className="h-[92vh] flex flex-col md:flex-row justify-center md:justify-between items-center">
         <div className="md:w-1/2">
           <div className="hidden md:block mt-8">
-            <img src="assets/Mobile login-cuate.svg" alt="Image Description" />
+            <img src="assets/login-image.svg" alt="Image Description" />
           </div>
         </div>
         <div className="md:w-1/2 p-8 bg-white shadow-xl rounded-lg lg:w-1/3">
@@ -112,11 +112,11 @@ const LoginForm: React.FC = () => {
             <div className="">
               <div className="text-gray-700 text-sm font-semibold pb-3">
                 <Link href="/forgot-password"
-                   className="text-green-500 hover:underline font-semibold">Forgot Password?
+                   className="text-blue-700 hover:underline font-semibold">Forgot Password?
                 </Link>
               </div>
               <button
-                className="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-3 rounded-lg focus:outline-none focus:ring focus:ring-green-200"
+                className="w-full bg-blue-600 hover:bg-blue-800 text-white font-semibold py-3 rounded-lg focus:outline-none focus:ring focus:ring-green-200"
                 type="submit"
               >
                 Log In
@@ -125,7 +125,7 @@ const LoginForm: React.FC = () => {
             <div className="text-gray-700 text-sm font-semibold mt-2 text-center">
             Don't have an account?{" "}
               <Link href="/signup"
-                className="text-green-500 hover:underline font-semibold">Sign Up
+                className="text-blue-700 hover:underline font-semibold">Sign Up
               </Link>
             </div>
           </form>
