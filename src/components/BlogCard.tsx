@@ -38,7 +38,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
   const [comments, setComments] = useState<string[]>([]);
   const [showComments, setShowComments] = useState(false);
 
-  const handleCommentSubmit = (e) => {
+  const handleCommentSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const newComment = comment.trim();
     if (newComment) {
