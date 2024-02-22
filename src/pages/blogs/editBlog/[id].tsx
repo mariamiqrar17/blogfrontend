@@ -44,7 +44,7 @@ const EditBlog = () => {
     try {
       const response = await axios({
         method: "get",
-        url: `http://localhost:3001/blogs/${id}`,
+        url: `https://blogcrudapp.vercel.app/blogs/${id}`,
         headers: {
           // "Content-Type": `multipart/form-data`,
           Authorization: `Bearer ${userData?.token}`,

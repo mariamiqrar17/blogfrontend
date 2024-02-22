@@ -33,7 +33,7 @@ const SignUpForm: React.FC = () => {
 
   
     try {
-      const response = await axios.post('http://localhost:3001/auth/signup',values)
+      const response = await axios.post('https://blogcrudapp.vercel.app/auth/signup',values)
       if(response.status === 201){
         toast.success(response.data.message)
         router.push('/login');

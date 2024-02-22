@@ -90,7 +90,7 @@ const CreateBlog: React.FC<Propstype> = ({ blog, isEdit = false }) => {
     try {
       const response = await axios({
         method: "get",
-        url: "http://localhost:3001/category/all",
+        url: "https://blogcrudapp.vercel.app/category/all",
         headers: {
           // "Content-Type": `multipart/form-data`,
           Authorization: `Bearer ${userData?.token}`,
@@ -159,7 +159,7 @@ const CreateBlog: React.FC<Propstype> = ({ blog, isEdit = false }) => {
         console.log("object, user"), userData;
         let res = await axios({
           method: "post",
-          url: "http://localhost:3001/blogs",
+          url: "https://blogcrudapp.vercel.app/blogs",
           data: formData,
           headers: {
             "Content-Type": `multipart/form-data`,
