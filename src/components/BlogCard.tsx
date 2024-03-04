@@ -1,6 +1,6 @@
+import React, { useState } from "react";
 import moment from "moment";
 import Link from "next/link";
-import React, { useState } from "react";
 
 interface BlogCardProps {
   createdAt: string;
@@ -37,6 +37,11 @@ const BlogCard: React.FC<BlogCardProps> = ({
   const [comment, setComment] = useState("");
   const [comments, setComments] = useState<string[]>([]);
   const [showComments, setShowComments] = useState(false);
+  const [reaction, setReaction] = useState<string | null>(null);
+
+  // const handleReaction = (selectedReaction: string) => {
+  //   setReaction(selectedReaction);
+  // };
 
   const handleCommentSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -48,8 +53,8 @@ const BlogCard: React.FC<BlogCardProps> = ({
   };
 
   return (
-    <div className="max-w-md mx-auto bg-white shadow-lg border-4 rounded-lg overflow-hidden">
-      {thumbnail && <img src={`http://localhost:3001/${thumbnail}`} alt="" />}
+    <div className="max-w-md mx-4 bg-white shadow-lg border-4 rounded-lg overflow-hidden">
+      {thumbnail && <img className="w-96 h-80" src={`https://blogbackend-ten.vercel.app/${thumbnail}`} alt="" />}
       <div className="p-4">
         <h2 className="text-xl font-semibold text-gray-800">{title}</h2>
         <p className="text-gray-600 text-sm">
@@ -58,19 +63,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
         <p className="text-gray-700 mt-2">{truncatedDescription}</p>
       </div>
 
-      <div className="bg-gray-100 p-2 flex justify-between">
-        <Link
-          href={`/blogs/${_id}`} // Replace with the actual link to the blog post
-          className="text-blue-600 hover:underline mt-2 font-semibold inline-block bg-blue-200 hover:bg-blue-300 py-2 px-4 rounded-lg mr-3"
-        >
-          Read More
-        </Link>
-        <Link
-          href={`/blogs/editBlog/${_id}`}
-          className="text-blue-600 hover:underline mt-2 font-semibold inline-block bg-blue-200 hover:bg-blue-300 py-2 px-4 rounded-lg"
-        >
-          Edit Blog
-        </Link>
+      <div className="bg-gray-100 p-2">
         <div className="ml-auto">
           <button
             className="text-blue-600 font-semibold"

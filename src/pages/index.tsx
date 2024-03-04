@@ -46,7 +46,7 @@ export default function Home() {
 
       <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
         <h1 className="text-2xl md:text-3xl font-semibold text-gray-500 mb-4 mt-8 text-center ">
-          All Blog Posts
+          THE MORE THAT YOU READ THE MORE THINGS YOU WILL KNOW, THE MORE THAT YOU LEARN THE MORE PLACES YOU WILL GO.
         </h1>
 
         <p className="text-gray-500 text-sm md:text-lg text-center mb-6 ">
@@ -54,7 +54,6 @@ export default function Home() {
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {blogData.map((blog, index) => (
-            // Check if blog is an object and not null before rendering BlogCard
             blog && typeof blog === 'object' && <BlogCard key={index} {...blog} />
           ))}
         </div>
